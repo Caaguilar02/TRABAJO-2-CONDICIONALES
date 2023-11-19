@@ -1,22 +1,27 @@
-import java.util.Scanner;
+class Main {
+  
+public static void main(String[] args) {
+   
+System.out.println("ingrese el primer numero");
+   
+final double n1 = Double.parseDouble(System.console().readLine());
 
-public class main  {
-    public static void main(String[] args) {
+    
+System.out.println("Ingrese el segundo numero");
 
-        System.out.print("Ingrese el primer número: ");
+   
+final double n2 = Double.parseDouble(System.console().readLine());
 
-      double n1 = scr.nextDouble();
+   
+if (n1 > n2) {
+     
+System.out.println(n1 + " es mayor que " + n2);
 
-        System.out.print("Ingrese el segundo número: ");
-        
-      double n2 = scr.nextdouble();
-
-         if (n1 > n2) {
-            System.out.println(n1 + " es mayor que " + n2);
-        } else if (n1 < n2) {
-            System.out.println(n1 + " es menor que " + n2);
-        } else {
-            System.out.println("Ambos números son iguales");
-        }
+    } else if (n1 < n2) {
+   
+System.out.println(n1 + " es menor que " + n2);
+    } else {
+      System.out.println("Ambos números son iguales");
     }
+  }
 }
