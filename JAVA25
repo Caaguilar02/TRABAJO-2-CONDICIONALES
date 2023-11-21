@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class SumaOMultiplicacion {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa el primer número (A):");
+        double a = scanner.nextDouble();
+
+        System.out.println("Ingresa el segundo número (B):");
+        double b = scanner.nextDouble();
+
+        double resultado;
+
+        if (a < 0 || b < 0) {
+            resultado = a + b;
+            System.out.println("Al menos uno de los números es negativo, la suma es: " + resultado);
+        } else {
+            resultado = a * b;
+            System.out.println("Ambos números son positivos, el producto es: " + resultado);
+        }
+
+        scanner.close();
+    }
+}
