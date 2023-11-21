@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+ class DescuentoVenta {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese el precio de la venta:");
+        double precioVenta = scanner.nextDouble();
+
+        double descuento;
+        double precioFinal;
+
+        if (precioVenta < 100) {
+            descuento = precioVenta * 0.05; // 5% de descuento
+        } else if (precioVenta >= 100 && precioVenta < 200) {
+            descuento = precioVenta * 0.10; // 10% de descuento
+        } else {
+            descuento = precioVenta * 0.15; // 15% de descuento
+        }
+
+        precioFinal = precioVenta - descuento;
+
+        System.out.println("Descuento realizado en pesos: $" + descuento);
+        System.out.println("Precio final con descuento: $" + precioFinal);
+
+        scanner.close();
+    }
+}
