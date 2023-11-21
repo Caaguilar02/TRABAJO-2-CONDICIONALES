@@ -1,0 +1,22 @@
+import java.util.Scanner;
+
+  class main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingresa el valor de a:");
+        double a = scanner.nextDouble();
+
+        System.out.println("Ingresa el valor de b:");
+        double b = scanner.nextDouble();
+
+        if (b != 0) {
+            double cociente = a / b;
+            System.out.println("El cociente entre a y b es: " + cociente);
+        } else {
+            System.out.println("La división por cero no es posible.");
+        }
+
+        scanner.close();
+    }
+}
