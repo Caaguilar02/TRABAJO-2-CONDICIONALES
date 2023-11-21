@@ -1,0 +1,20 @@
+ import java.util.Scanner;
+ class main {
+ public static void main (String[] args) {
+     Scanner scanner = new Scanner(System.in);
+
+    System.out.println("Ingresa un número entre 1 y 7:");
+
+    int numDia = scanner.nextInt();
+
+    String[] diasSemana = {"", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo"};
+
+    if (numDia >= 1 && numDia <= 7) {
+        String nombreDia = diasSemana[numDia];
+        System.out.println("El día correspondiente al número " + numDia + " es: " + nombreDia);
+    } else {
+        System.out.println("Número inválido. Debe estar entre 1 y 7.");
+    }
+
+    scanner.close();
+} }
