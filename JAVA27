@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+  class TipoCuadrilatero {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Ingrese la base del cuadrilátero:");
+        double base = scanner.nextDouble();
+
+        System.out.println("Ingrese la altura del cuadrilátero:");
+        double altura = scanner.nextDouble();
+
+        if (base > 0 && altura > 0) {
+            if (base == altura) {
+                System.out.println("Es un cuadrado.");
+                calcularCuadrado(base);
+            } else {
+                System.out.println("Es un rectángulo.");
+                calcularRectangulo(base, altura);
+            }
+        } else {
+            System.out.println("Las medidas deben ser mayores que cero.");
+        }
+
+        scanner.close();
+    }
+
+    public static void calcularCuadrado(double lado) {
+        double perimetro = 4 * lado;
+        double area = lado * lado;
+
+        System.out.println("El perímetro del cuadrado es: " + perimetro);
+        System.out.println("El área del cuadrado es: " + area);
+    }
+
+    public static void calcularRectangulo(double base, double altura) {
+        double perimetro = 2 * (base + altura);
+        double area = base * altura;
+
+        System.out.println("El perímetro del rectángulo es: " + perimetro);
+        System.out.println("El área del rectángulo es: " + area);
+    }
+}
